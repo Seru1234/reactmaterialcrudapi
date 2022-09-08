@@ -1,21 +1,21 @@
-import { BrowserRouter,  Route, Routes } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import View from "./Students/View";
 import Edit from "./Students/Edit";
-// import { List } from "@material-ui/core";
 import List from "./Students/List";
+import View from "./Students/View";
 
 function App() {
   return (
     <>
+    
       <BrowserRouter>
-        <Routes>
-          <Route  path="/" element={<Home/>} exact/>
-          <Route  path="/view" element={<View/>} />
-          <Route  path="/edit" element={<Edit/>} />
-          <Route  path="/list/:id" element={<List/>}/>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route  path="/view:id" component={View} />
+          <Route exact path="/edit/:id" component={Edit} />
+          <Route exact path="/list/:id" component={List} />
 
-        </Routes>
+        </Switch>
       </BrowserRouter>
     </>
   );

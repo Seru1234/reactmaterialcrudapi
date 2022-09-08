@@ -8,7 +8,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 const useStyles = makeStyles({
  stuListColor: {
-  backgroundColor: orange[400],
+  backgroundColor: orange[500],
   color: "white"
  },
  tableHeadCell: {
